@@ -3,10 +3,10 @@
   "version": "1.0.0",
   "description": "Monolithic application with microservices",
   "scripts": {
-    "start:products": "node products-service/index.js",
-    "start:users": "node users-service/index.js",
-    "start:orders": "node orders-service/index.js",
-    "start:gateway": "node gateway-server/index.js",
+    "start:products": "nodemon products-service/index.js",
+    "start:users": "nodemon users-service/index.js",
+    "start:orders": "nodemon orders-service/index.js",
+    "start:gateway": "nodemon gateway-server/index.js",
     "start": "concurrently \"npm run start:products\" \"npm run start:users\" \"npm run start:orders\" \"npm run start:gateway\""
   },
   "dependencies": {
@@ -14,5 +14,8 @@
     "express": "^4.17.1",
     "mongoose": "^6.0.12",
     "axios": "^0.24.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.13"
   }
 }
